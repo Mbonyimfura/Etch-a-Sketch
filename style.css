@@ -1,0 +1,31 @@
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+}
+
+.grid-item {
+  background-color: #ccc;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  margin: 1px;
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 10px;
+  display: flex;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  border: 1px solid #999;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #e0e0e0;
+}
