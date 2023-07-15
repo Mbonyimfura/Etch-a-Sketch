@@ -5,7 +5,7 @@ This project implements a sketchpad and Etch-A-Sketch functionality using HTML, 
 ## Features
 
 - Interactive sketchpad with hover effect
-- Etch-A-Sketch functionality for drawing 
+- Etch-A-Sketch functionality for drawing  and erasing
 - Grid customization options
 
 
@@ -13,3 +13,4 @@ This project implements a sketchpad and Etch-A-Sketch functionality using HTML, 
 
 - Click on the "New Grid" button to generate a new grid
 - Hover over the squares to draw 
+-click reset button to reset grid

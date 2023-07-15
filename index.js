@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector(".grid-container");
-const buttonContainer = document.querySelector("button");
-
+const buttonContainer = document.querySelector(".create-button ");
+const resetButton=document.querySelector('.reset-button')
+gridItems = [];
 function createNewGrid() {
   const squarePerSide = prompt(
     "Enter the number of square per side (maximum:100):"
@@ -9,6 +10,7 @@ function createNewGrid() {
 
   //Remove existing grid
   gridContainer.innerHTML = "";
+  
 
   const squareSize = 960 / gridSize - 2;
 
@@ -19,6 +21,7 @@ function createNewGrid() {
       gridItem.style.width = squareSize + "px";
       gridItem.style.height = squareSize + "px";
       gridContainer.appendChild(gridItem);
+      gridItems.push(gridItem)
 
       gridItem.addEventListener("mouseenter", () => {
         const randomColor = getRandomColor();
@@ -27,6 +30,11 @@ function createNewGrid() {
     }
   }
 }
+function resetGrid() {
+  gridItems.forEach((gridItem) => {
+    gridItem.style.backgroundColor = "#ccc";
+  });
+}
 function getRandomColor() {
   const red = Math.floor(Math.random() * 256);
   const green = Math.floor(Math.random() * 256);
@@ -34,4 +42,6 @@ function getRandomColor() {
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
+
 buttonContainer.addEventListener("click", createNewGrid);
+resetButton.addEventListener('click',resetGrid)
